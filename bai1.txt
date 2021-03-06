@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int a[10000],b[10000];
+int cheo1[20000], cheo2[20000];
+int main()
+{
+    int n;
+    cin >> n;
+    for(int i=1; i<=n; i++)
+    {
+        int x, y;
+        cin >> x >> y;
+        if(a[x])
+        {
+            cout <<"yes";
+            return 0;
+        }
+        if(b[y])
+        {
+            cout <<"yes";
+            return 0;
+        }
+        if(cheo1[x-y+10000])
+        {
+            cout <<"yes";
+            return 0;
+        }
+        if(cheo2[x+y-1])
+        {
+            cout<<"yes";
+            return 0;
+        }
+        a[x]++, b[y]++;
+        cheo1[x-y+10000]++, cheo2[x+y-1]++;
+    }
+    cout << "no";
+    return 0;
+}
