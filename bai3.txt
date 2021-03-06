@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,n,m,pos=1;
+    cin>>a>>n>>m;
+    for(int i=1; i<=n; i++)
+    {
+        pos=pos*a%m;
+    }
+    cout<<pos;
+    return 0;
+}
+
